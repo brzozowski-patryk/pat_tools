@@ -11,30 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{B974946A-8
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "memory_manager", "memory_manager\memory_manager.vcxproj", "{BA95EFC4-D0CF-4581-A1C7-04CBC14E6CC6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pat_tools", "pat_tools\pat_tools.vcxproj", "{496B3A69-BC9E-4F50-B6FB-BE8EC0C309FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{49EC382B-A438-45DF-A648-89E0325A7E56}.Debug|x64.ActiveCfg = Debug|x64
-		{49EC382B-A438-45DF-A648-89E0325A7E56}.Debug|x64.Build.0 = Debug|x64
-		{49EC382B-A438-45DF-A648-89E0325A7E56}.Debug|x86.ActiveCfg = Debug|Win32
-		{49EC382B-A438-45DF-A648-89E0325A7E56}.Debug|x86.Build.0 = Debug|Win32
 		{49EC382B-A438-45DF-A648-89E0325A7E56}.Release|x64.ActiveCfg = Release|x64
 		{49EC382B-A438-45DF-A648-89E0325A7E56}.Release|x64.Build.0 = Release|x64
-		{49EC382B-A438-45DF-A648-89E0325A7E56}.Release|x86.ActiveCfg = Release|Win32
-		{49EC382B-A438-45DF-A648-89E0325A7E56}.Release|x86.Build.0 = Release|Win32
-		{BA95EFC4-D0CF-4581-A1C7-04CBC14E6CC6}.Debug|x64.ActiveCfg = Debug|x64
-		{BA95EFC4-D0CF-4581-A1C7-04CBC14E6CC6}.Debug|x64.Build.0 = Debug|x64
-		{BA95EFC4-D0CF-4581-A1C7-04CBC14E6CC6}.Debug|x86.ActiveCfg = Debug|Win32
-		{BA95EFC4-D0CF-4581-A1C7-04CBC14E6CC6}.Debug|x86.Build.0 = Debug|Win32
 		{BA95EFC4-D0CF-4581-A1C7-04CBC14E6CC6}.Release|x64.ActiveCfg = Release|x64
 		{BA95EFC4-D0CF-4581-A1C7-04CBC14E6CC6}.Release|x64.Build.0 = Release|x64
-		{BA95EFC4-D0CF-4581-A1C7-04CBC14E6CC6}.Release|x86.ActiveCfg = Release|Win32
-		{BA95EFC4-D0CF-4581-A1C7-04CBC14E6CC6}.Release|x86.Build.0 = Release|Win32
+		{496B3A69-BC9E-4F50-B6FB-BE8EC0C309FF}.Release|x64.ActiveCfg = Release|x64
+		{496B3A69-BC9E-4F50-B6FB-BE8EC0C309FF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,18 @@
 
 #include "dynamic_memory.h"
+#include <stdio.h>
 #include <memory.h>
+#include <math.h>
+#include <map>
 
-///////////////////////////////////////////////////////////////////////
+#include <string>
+#include <queue>
+#include <climits> // for CHAR_BIT
+#include <iterator>
+#include <algorithm>
+#include "zlib.h"
+
+
 
 dynamic_memory::dynamic_memory()
 {
@@ -68,6 +78,7 @@ void dynamic_memory::grow()
 {
 	char* temp = m_data;
 	int siz = m_size;
+
 	m_size = siz * 2;
 	m_data = new char[m_size];
 	memcpy(m_data, temp, siz);
@@ -86,4 +97,58 @@ __int8* dynamic_memory::get_buffer() const { return m_data; }
 void dynamic_memory::copy_from(void* ptr)
 {
 	memcpy(m_data, ptr, get_size_bytes());
+}
+
+void dynamic_memory::write_raw(FILE* f)
+{
+	fwrite(&m_size, sizeof(int), 1, f);
+	fwrite(m_data, m_size, 1, f);
+}
+void dynamic_memory::read_raw(FILE* f)
+{
+	int siz = 0;
+	fread(&siz, sizeof(int), 1, f);
+	initialize_bytes(siz);
+	fread(m_data, m_size, 1, f);
+}
+
+
+void dynamic_memory::allocate_bytes(int num)
+{
+	release();
+	if (num)
+	{
+		m_size = num;
+		m_data = new char[m_size];
+	}
+}
+
+void dynamic_memory::write_zip(FILE* f)
+{
+	unsigned long csize = m_size;
+	char* temp = new char[csize];
+	int nResult = compress2((Bytef*)temp, &csize, (Bytef*)m_data, m_size, 9);
+	if (nResult == Z_OK)
+	{
+		fwrite(&m_size, sizeof(int), 1, f);
+		fwrite(&csize, sizeof(int), 1, f);
+		fwrite(temp, csize, 1, f);
+	}
+	delete[] temp;
+}
+void dynamic_memory::read_zip(FILE* f)
+{
+	release();
+	int s = 0;
+	int comp = 0;
+	fread(&s, sizeof(int), 1, f);
+	fread(&comp, sizeof(int), 1, f);
+	if (s && comp)
+	{
+		allocate_bytes(s);
+		char* temp = new char[comp];
+		fread(temp, comp, 1, f);
+		unsigned long csize = m_size;
+		int nResult = uncompress((Bytef*)m_data, &csize, (Bytef*)temp, comp);
+	}
 }

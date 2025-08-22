@@ -5,15 +5,96 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="zip">
+      <UniqueIdentifier>{d3850d2c-c646-484c-8890-29f543f47a4f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamic_memory.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="crc32.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="deflate.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="gzguts.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="inffast.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="inffixed.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="inflate.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="inftrees.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="trees.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="zconf.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="zutil.h">
+      <Filter>zip</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dynamic_memory.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adler32.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="compress.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="crc32.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="deflate.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="gzclose.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="gzlib.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="gzread.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="gzwrite.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="infback.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="inffast.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="inflate.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="inftrees.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="trees.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="uncompr.c">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="zutil.c">
+      <Filter>zip</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
